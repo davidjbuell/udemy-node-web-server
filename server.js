@@ -46,15 +46,22 @@ hbs.registerHelper('screamIt', (text) => {
 // Routes
 app.get('/', (request, response) => {
 	response.render('home.hbs', {
-		pageTitle	: 'Home Page',
+		pageTitle	: 'Home',
 		welcomeMsg	: 'Welcome to my NodeJS web server.'
 	});
 });
 
 app.get('/about', (request, response) => {
 	response.render('about.hbs', {
-		pageTitle	: 'About Page',
+		pageTitle	: 'About',
 		welcomeMsg	: 'Welcome to the About page.'
+	});
+});
+
+app.get('/projects', (request, response) => {
+	response.render('about.hbs', {
+		pageTitle	: 'Projects',
+		welcomeMsg	: 'Welcome to the Projects page.'
 	});
 });
 
